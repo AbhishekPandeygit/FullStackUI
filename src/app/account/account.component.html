@@ -1,0 +1,62 @@
+
+    <header>
+        <h1 class="heading">Welcome !</h1>
+    </header>
+
+    <!-- container div -->
+    <div class="container">
+
+        <!-- upper button section to select
+             the login or signup form -->
+        <div #slider class="slider"></div>
+        <div class="btn">
+            <!-- <button #login class="login" (click)="toggleSlider($event)">Login</button>
+            <button #signup class="signup" (click)="toggleSlider($event)">Signup</button> -->
+            <div #signup class="signup" (click)="toggleSlider($event)">Sign Up</div>
+            <div #login class="login" (click)="toggleSlider($event)">Login</div>
+        </div>
+
+        <!-- Form section that contains the
+             login and the signup form -->
+        <div #formSection class="form-section">
+
+            <!-- login form -->
+            <div class="login-box">
+                <label>Email</label>
+                <input type="email" 
+                       class="email ele" 
+                       [(ngModel)] = "loginRequest.Email"
+                       placeholder="enter your email">
+
+                <label>Password</label>
+                <input type="password"
+                       class="password ele" 
+                       [(ngModel)] = "loginRequest.Password"
+                       placeholder="enter password">
+                <button class="clkbtn" (click)="Login()">Login</button>
+            </div>
+
+            <!-- signup form -->
+            <div class="signup-box">
+                <label>Email</label>
+                <input type="text" 
+                       class="password ele"
+                       [(ngModel)] = "registerRequest.Email" 
+                       placeholder="enter Email">
+
+                <label>Password</label>
+                <input type="password" 
+                       class="password ele"
+                       [(ngModel)] = "registerRequest.Password" 
+                       placeholder="enter password">
+
+                <label>Confirm Password</label>
+                <input type="password" 
+                       class="password ele" 
+                       [(ngModel)] = "registerRequest.ConfirmPassword"
+                       placeholder="Confirm password">
+                <button class="clkbtn" (click)="Register()">Signup</button>
+            </div>
+        </div>
+    </div>
+    
